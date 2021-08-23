@@ -1,0 +1,187 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
+  <link rel="stylesheet" href="css/estilos.css">
+  <title>OYE - Registro</title>
+</head>
+
+<body>
+
+  <!--NAV-->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">
+        <img src="imagenes/logo.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+        <span class="fw-bold h3" style="color: #1361aa;">OYE</span>
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Canciones</a>
+          </li>
+        </ul>
+        <form class="d-flex">
+          <!--Boton que abre el modal-->
+          <button type="button" class="btn btn-primary m-1" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Contacto
+          </button>
+
+          <!-- Modal -->
+          <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+              <div class="modal-content">
+                <div class="modal-header">
+                  <h5 class="modal-title fw-bold" id="exampleModalLabel">Contacto</h5>
+                  <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                  <p class="text-muted">info@oye.com</p>
+                  <a href="#" style="text-decoration: none;">+1 123 123123123</a>
+                </div>
+                <div class="modal-footer">
+                  <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <a class="btn btn-primary m-1" href="login.html" role="button">Inicio de Sesión</a>
+          <a class="btn btn-primary m-1" href="registro.html" role="button">Registro</a>
+        </form>
+      </div>
+    </div>
+  </nav>
+  <!--Fin Nav-->
+
+  <!--Formulario Registro-->
+
+  <main class="login-form">
+    <div class="cotainer">
+      <div class="row justify-content-center">
+        <div class="col-md-8">
+          <div class="card">
+            <div class="card-header fw-bold ">Registro</div>
+            <div class="card-body">
+              <form id="formulario">
+                <div class="form-group mb-3">
+                  <label for="email">Correo Electrónico *</label>
+                  <input type="email" class="form-control" id="email" placeholder="Correo Electrónico">
+                  <span class="text-danger" id="errorEmail"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="contrasena">Contraseña *</label>
+                  <input type="password" class="form-control" id="contrasena" placeholder="Contraseña">
+                  <span class="text-danger" id="errorContrasena"></span>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="confirmacion">Confirmación de Contraseña *</label>
+                  <input type="password" class="form-control" id="confirmacion" placeholder="Confirmar contraseña">
+                  <span class="text-danger" id="errorConfirmacion"></span>
+                </div>
+
+                <div class="form-row">
+                  <div class="form-group mb-3">
+                    <label for="tipo">Genero musical favorito *</label>
+                    <select id="tipo" class="form-select">
+                      <option value="-1" selected>Seleccione</option>
+                      <option value="1">Rock</option>
+                      <option value="2">Balada</option>
+                      <option value="3">Salsa</option>
+                      <option value="4">Otro</option>
+                    </select>
+                    <span class="text-danger" id="errorTipo"></span>
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <label for="confirmacion" class="form-label fw-bold">Edad *</label>
+                  <span class="text-danger" id="errorRadio"></span>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioedad" id="radio">
+                    <label class="form-check-label" for="radio">
+                      Menor a 20
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioedad" id="radio">
+                    <label class="form-check-label" for="radio">
+                      20 a 40
+                    </label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="radioedad" id="radio">
+                    <label class="form-check-label" for="radio">
+                      Mayor a 40
+                    </label>
+                  </div>
+                </div>
+
+                <div class="form-group mb-3">
+                  <div class="form-check">
+                    <input class="form-check-input" type="checkbox" id="acepto">
+                    <label class="form-check-label" for="acepto">
+                      Acepto los términos de uso <span class="text-danger" id="errorAcepto"></span>
+                    </label>
+                  </div>
+                </div>
+
+                <p class="mb-3" style="color: #1361aa;">* Campos Obligatorios</p>
+
+                <div class="col-md-1 offset-md-0">
+
+                  <button type="submit" class="btn btn-primary" onclick="return validar(this.form)"><a
+                      class="btn btn-primary" href="login.html">Continuar</a></button>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
+  </main>
+
+  <!--Fin Formulario-->
+
+  <!-- Footer-->
+  <footer class="container-fluid py-2 text-white" style="background-color: #1361aa;">
+    <div class="row">
+      <div class="col text-end ">
+        Comparte la musica
+      </div>
+      <div class="col text-start">
+        © Derechos Reservados
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- Optional JavaScript; choose one of the two! -->
+
+
+  <!-- Option 1: Bootstrap Bundle with Popper -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj"
+    crossorigin="anonymous"></script>
+  <script src="js/registro.js"></script>
+
+</body>
+
+</html>
